@@ -1,8 +1,9 @@
 const Koa = require('koa')
 const app = new Koa()
-const {normal} = require('./tpl/.index')
+const ejs = require('ejs')
+const {htmlTpl,ejsTpl} = require('./tpl/index')
 app.use(async (ctx,next)=>{
   ctx.type='text/html;charset=utf-8'
-  ctx.body=normal
+  ctx.body=ejs.render(ejsTpl,{you:'Luke',me:'Scott'})
 })
 app.listen(3000)
