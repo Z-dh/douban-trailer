@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Z-dh/douban-trailer#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "koa": "^2.6.2"
+    "koa": "^2.6.2",
+    "puppeteer": "^1.10.0"
   }
 }

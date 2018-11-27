@@ -1,14 +1,14 @@
 const header = require('./includes/header')
+const script = require('./includes/script')
+const style = require('./includes/style')
 module.exports = `
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Koa Server HTML</title>
-        <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">     
-        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>   
-        <script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.0/js/bootstrap.bundle.js"></script>        
+        <title>Koa Server HTML</title>   
+        ${style}       
     </head>
     <style>
         header{
@@ -106,7 +106,7 @@ module.exports = `
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543828357&di=63e8a6ebce84560c1ca5b4fe1e9bcf30&imgtype=jpg&er=1&src=http%3A%2F%2Ftp.yiaedu.com%2Fshowimg.php%3Furl%3Dhttp%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1703%2F867-1F330164643.jpg" data-video="http://video.iblack7.com/tgGnZRn3W4Ajw6PGcA_9Z.mp4" alt="" class="card-img-top">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.webp" data-video="http://vt1.doubanio.com/201811261803/5a7275d05ba8d5c80a632d9d65a3f987/view/movie/M/302180664.mp4" alt="" class="card-img-top">
                             <div class="card-body">
                                 <h4 class="card-title">这是电影标题</h4>
                                 <p class="card-desc">这是电影描述</p>
@@ -116,7 +116,7 @@ module.exports = `
                     </div>
                     <div class="col-md-6">
                          <div class="card">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543828357&di=63e8a6ebce84560c1ca5b4fe1e9bcf30&imgtype=jpg&er=1&src=http%3A%2F%2Ftp.yiaedu.com%2Fshowimg.php%3Furl%3Dhttp%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1703%2F867-1F330164643.jpg" data-video="http://video.iblack7.com/tgGnZRn3W4Ajw6PGcA_9Z.mp4" alt="" class="card-img-top">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.webp" data-video="http://vt1.doubanio.com/201811261807/062f0787ca9410b1e26cde80434ba02e/view/movie/M/402380253.mp4" alt="" class="card-img-top">
                             <div class="card-body">
                                 <h4 class="card-title">这是电影标题</h4>
                                 <p class="card-desc">这是电影描述</p>
@@ -128,7 +128,7 @@ module.exports = `
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543828357&di=63e8a6ebce84560c1ca5b4fe1e9bcf30&imgtype=jpg&er=1&src=http%3A%2F%2Ftp.yiaedu.com%2Fshowimg.php%3Furl%3Dhttp%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1703%2F867-1F330164643.jpg" data-video="http://video.iblack7.com/tgGnZRn3W4Ajw6PGcA_9Z.mp4" alt="" class="card-img-top">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.webp" data-video="http://vt1.doubanio.com/201811261758/0e6e8562be579b704b8415f7862522bb/view/movie/M/402330315.mp4" alt="" class="card-img-top">
                             <div class="card-body">
                                 <h4 class="card-title">这是电影标题</h4>
                                 <p class="card-desc">这是电影描述</p>
@@ -138,7 +138,7 @@ module.exports = `
                     </div>
                     <div class="col-md-6">
                          <div class="card">
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543828357&di=63e8a6ebce84560c1ca5b4fe1e9bcf30&imgtype=jpg&er=1&src=http%3A%2F%2Ftp.yiaedu.com%2Fshowimg.php%3Furl%3Dhttp%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1703%2F867-1F330164643.jpg" data-video="http://video.iblack7.com/tgGnZRn3W4Ajw6PGcA_9Z.mp4" alt="" class="card-img-top">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2519070834.webp" data-video="http://vt1.doubanio.com/201811261758/0e6e8562be579b704b8415f7862522bb/view/movie/M/402330315.mp4" alt="" class="card-img-top">
                             <div class="card-body">
                                 <h4 class="card-title">这是电影标题</h4>
                                 <p class="card-desc">这是电影描述</p>
@@ -150,6 +150,46 @@ module.exports = `
             </div>
             </div>
         </div>
+        <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div id="videoModal" class="modal-content">
+                
+                </div>
+            </div> 
+        </div>
+        ${script}
+        <script>
+            var player=null;
+            $(document).ready(function() {
+              $('#myModal').on('hidden.bs.modal',function(e) {
+                if (player && player.pause) {
+                    player.pause()
+                } 
+              })
+              $('.card-img-top').click(function(e) {
+                var video = $(this).data('video')
+                var image = $(this).attr('src')
+                $('#myModal').modal('show')
+                if (!player){
+                    player = new DPlayer({
+                        container:document.getElementById('videoModal'),
+                        screenshot:true,
+                        video:{
+                        url:video,
+                        pic:image,
+                        thumbnails:image
+                        }
+                    })
+                } else {
+                    player.switchVideo({
+                        url:video,
+                        pic:image,
+                        thumbnails:image
+                    })
+                }
+              })
+            })
+        </script>
     </body>
 </html>
 `
